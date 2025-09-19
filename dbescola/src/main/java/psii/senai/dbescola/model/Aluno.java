@@ -1,5 +1,4 @@
 package psii.senai.dbescola.model;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -16,6 +15,7 @@ public class Aluno {
     private String matricula;
     private String curso;
     private Integer idade;
+
     public Long getId() {
         return id;
     }
@@ -46,8 +46,5 @@ public class Aluno {
     public void setIdade(Integer idade) {
         this.idade = idade;
     }
-
-
-
 
 }

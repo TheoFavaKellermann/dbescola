@@ -6,4 +6,3 @@ import psii.senai.dbescola.model.Aluno;
 
 public interface AlunoRepository extends JpaRepository<Aluno, Long> {
 }
-

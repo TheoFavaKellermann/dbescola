@@ -3,8 +3,8 @@ package psii.senai.dbescola.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 
 import psii.senai.dbescola.model.Aluno;
 import psii.senai.dbescola.repository.AlunoRepository;
@@ -24,11 +24,13 @@ public class AlunoController {
         model.addAttribute("aluno", new Aluno());
         return "alunos";
     }
-
+    @GetMapping("/")
+    public String home() {
+        return "redirect:/alunos";
+    }    
     @PostMapping("/alunos/salvar")
     public String salvar(@ModelAttribute Aluno aluno) {
         repository.save(aluno);
         return "redirect:/alunos";
     }
 }
-
